@@ -1,0 +1,17 @@
+{
+  "name": "hospital-management",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix backend run dev",
+    "client": "npm --prefix frontend start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
